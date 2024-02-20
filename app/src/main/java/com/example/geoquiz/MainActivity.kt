@@ -25,8 +25,8 @@ class MainActivity : AppCompatActivity() {
                 R.string.correct_toast,
                 Toast.LENGTH_SHORT
             )
-            correctToast.setGravity(Gravity.TOP, 0, 0)
-            correctToast.show()
+            correctToast.apply {Gravity.TOP; show() }
+
 
         }
         falseButton.setOnClickListener { view: View ->
@@ -35,8 +35,7 @@ class MainActivity : AppCompatActivity() {
                 R.string.incorrect_toast,
                 Toast.LENGTH_SHORT
             )
-            incorrectToast.setGravity(Gravity.TOP, 0, 0)
-            incorrectToast.show()
+            incorrectToast.apply {setGravity(Gravity.TOP, 0, 0); show() }
         }
     }
 }
