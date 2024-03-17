@@ -4,8 +4,9 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 
 
-class QuizViewModel: ViewModel() {
+class QuizViewModel : ViewModel() {
     var currentIndex = 0
+    var isCheater = false
     private val questionBank = listOf(
         Question(R.string.question_australia, true),
         Question(R.string.question_oceans, true),
